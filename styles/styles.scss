@@ -1,0 +1,56 @@
+@use "constants" as constants;
+@use "nav-bar" as navbar;
+@use "about";
+@use "skills";
+@use "portfolio";
+@use "experience";
+@use "contact";
+
+* {
+  background-color: constants.$backgroundColor;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span {
+    background-color: transparent;
+  }
+  a {
+    text-decoration: none;
+    background-color: transparent;
+  }
+
+  a:link {
+    color: inherit;
+  }
+
+  a:visited {
+    color: inherit;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid constants.$mainColor;
+  }
+}
+
+footer {
+  height: 8vh;
+  width: 100%;
+  background-color: constants.$lightOrange;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.85rem;
+}

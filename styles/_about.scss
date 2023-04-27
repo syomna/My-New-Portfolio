@@ -1,0 +1,86 @@
+@use "constants" as constants;
+
+// // About
+#about {
+  padding: 6rem constants.$mainXPadding 4rem constants.$mainXPadding;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6rem;
+
+  #summary {
+    span {
+      display: inline-block;
+      padding: 0;
+      font-size: 3rem;
+      color: constants.$mainColor;
+      font-family: constants.$robotoFont;
+    }
+    font-size: 1.5rem;
+    h2 {
+      font-size: 1.5rem;
+      padding-top: 0.7rem;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: solid constants.$mainColor 0.3rem;
+      font-size: 1rem;
+    }
+    button:hover {
+      cursor: pointer;
+      background-color: constants.$mainColor;
+      color: #fff;
+    }
+  }
+
+  #social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .vertical-line {
+      width: 4px;
+      height: 6rem;
+      background-color: constants.$mainColor;
+      margin: 0 auto;
+    }
+
+    i {
+      font-size: 1.5rem;
+      padding-right: 0.5rem;
+      cursor: pointer;
+    }
+
+    a img {
+      cursor: pointer;
+    }
+  }
+}
+#social a i:hover {
+  color: constants.$mainColor;
+}
+#social a svg:hover {
+  fill: constants.$mainColor;
+}
+#about-summary {
+  padding: 4rem constants.$mainXPadding;
+  background-color: constants.$lightOrange;
+  h1 {
+    @include constants.title;
+  }
+  .summary-profile {
+    display: flex;
+    margin-top: 1rem;
+    background-color: transparent;
+  }
+  hr {
+    @include constants.hr(4rem, 0.7rem 0.7rem 0.7rem 0);
+    background-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #about {
+    padding: 2rem constants.$mainXPadding;
+  }
+}

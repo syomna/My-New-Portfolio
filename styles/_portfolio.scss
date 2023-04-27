@@ -1,0 +1,60 @@
+@use "constants" as constants;
+
+// Portfolio
+#portfolio {
+  padding: 0 constants.$mainXPadding;
+  h1 {
+    @include constants.title;
+    text-align: center;
+  }
+  #projects {
+    margin: 1rem 0;
+    .project {
+      display: flex;
+      margin-top: 1rem;
+      gap: 10px;
+      padding: 0;
+      img {
+        height: 40vh;
+        padding: 0;
+      }
+      .description {
+        flex-grow: 1;
+        h3 {
+          font-size: 1.2rem;
+        }
+        p {
+          font-size: 0.95rem;
+          margin-top: 0.5rem;
+        }
+        hr {
+          @include constants.hr(12rem, 0.7rem 0);
+        }
+        a {
+          padding: 0;
+          font-weight: bold;
+          color: constants.$linkColor;
+          margin-right: 0.5rem;
+        }
+        .fa-link {
+          color: constants.$linkColor;
+        }
+      }
+    }
+  }
+}
+
+// /* Small Devices (Tablets) */
+@media only screen and (max-width: 750px) {
+  /* CSS Rules */
+  * {
+    padding: 0 0.5rem;
+  }
+  #portfolio #projects .project {
+    flex-direction: column;
+    gap: 30px;
+    img {
+      height: 30vh;
+    }
+  }
+}

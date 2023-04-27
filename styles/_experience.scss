@@ -1,0 +1,49 @@
+@use "constants" as constants;
+
+// // Experience
+#experience {
+  margin: 6rem 0;
+  padding-bottom: 2rem;
+  background-color: constants.$lightOrange;
+  h1 {
+    @include constants.title;
+    padding: 2rem constants.$mainXPadding;
+  }
+  .job {
+    .position {
+      display: flex;
+      justify-content: space-between;
+      background-color: inherit;
+    }
+    background-color: constants.$lightOrange;
+    .job-description {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: rgb(68, 68, 69);
+    }
+  }
+}
+
+.job-section {
+  background-color: constants.$lightOrange;
+  padding: 0 constants.$mainXPadding;
+  display: flex;
+  justify-content: center;
+}
+
+.ex-style {
+  background-color: constants.$lightOrange;
+  padding: 0.5rem 0.5rem 0 0;
+  .circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: constants.$mainColor;
+  }
+  .vertical-line {
+    width: 2px;
+    height: 90%;
+    background-color: constants.$mainColor;
+    margin: 0.2rem auto;
+  }
+}

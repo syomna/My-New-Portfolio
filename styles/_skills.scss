@@ -1,0 +1,43 @@
+@use "constants" as constants;
+
+#my-skills {
+  padding: 6rem constants.$mainXPadding;
+
+  h1 {
+    @include constants.title;
+    text-align: center;
+  }
+
+  .skill {
+    height: 8.5rem;
+    width: 8.5rem;
+    border-radius: 50%;
+    background-color: constants.$skillColor;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // cursor: pointer;
+
+    img {
+      background-color: transparent;
+    }
+    p {
+      font-size: 0.8rem;
+      padding-top: 0.5rem;
+      text-align: center;
+    }
+  }
+
+  .skill:hover {
+    background-color: constants.$mainColor;
+  }
+}
+
+#skills {
+  margin-top: 0.7rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-gap: 1.5rem;
+}

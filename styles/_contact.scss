@@ -1,0 +1,62 @@
+@use "constants" as constants;
+// Contact
+#contact {
+  h2 {
+    overflow: hidden;
+    text-align: center;
+    @include constants.title;
+  }
+
+  h2:before,
+  h2:after {
+    background-color: constants.$mainColor;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
+
+  h2:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+
+  h2:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
+
+  .contacts {
+    padding: 2rem constants.$mainXPadding;
+    display: flex;
+    margin: 1rem 0;
+    justify-content: space-around;
+    gap: 10px;
+    .container {
+      height: 8vh;
+      width: 30vw;
+      background-color: constants.$skillColor;
+      border-radius: 4px;
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      .fa-envelope {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #contact .contacts {
+    flex-direction: column;
+    .container {
+      width: 100%;
+      align-items: center;
+    }
+  }
+}
