@@ -9,8 +9,8 @@
   }
 
   .skill {
-    height: 8.5rem;
-    width: 8.5rem;
+    height: 8rem;
+    width: 8rem;
     border-radius: 50%;
     background-color: constants.$skillColor;
     font-size: 1rem;
@@ -37,7 +37,10 @@
 
 #skills {
   margin-top: 0.7rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   grid-gap: 1.5rem;
 }

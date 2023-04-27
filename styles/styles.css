@@ -89,6 +89,7 @@
   border-radius: 0.5rem;
   border: solid #ffc86a 0.3rem;
   font-size: 1rem;
+  color: black;
 }
 #about #summary button:hover {
   cursor: pointer;
@@ -158,8 +159,8 @@
   text-align: center;
 }
 #my-skills .skill {
-  height: 8.5rem;
-  width: 8.5rem;
+  height: 8rem;
+  width: 8rem;
   border-radius: 50%;
   background-color: #f5f5f5;
   font-size: 1rem;
@@ -182,8 +183,9 @@
 
 #skills {
   margin-top: 0.7rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   grid-gap: 1.5rem;
 }
 
