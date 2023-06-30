@@ -9,6 +9,10 @@
   }
   #projects {
     margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
     .project {
       display: flex;
       margin-top: 1rem;
@@ -17,6 +21,7 @@
       img {
         height: 40vh;
         padding: 0;
+        padding-right: 1rem;
       }
       .description {
         flex-grow: 1;

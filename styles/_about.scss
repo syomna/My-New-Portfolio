@@ -35,6 +35,15 @@
     }
   }
 
+  .resume {
+    margin-top: 2rem;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: solid constants.$mainColor 0.3rem;
+      font-size: 1rem;
+      background-color: constants.$mainColor;
+  }
+
   #social {
     display: flex;
     flex-direction: column;

@@ -37,8 +37,8 @@ const projects = [
     image: "./assets/images/nanny-finder.png",
     title: "Nanny Finder App",
     description: `
-      <p>
-I worked on a mobile app built with Flutter and Firebase that allows users to sign up as nannies to find jobs or for families to hire nannies. <br />The app makes use of several Firebase services, including authentication, Firestore, Storage, Dynamic Links and Hosting. <br />In addition, I also built a simple web version of the app using Flutter Web to increase accessibility. <br />The end product was a fully functional, easy-to-use mobile and web app that connected nannies with families providing a valuable resource for both parties.</p>
+      <p> This app connects nannies with families, simplifying childcare hiring. It fosters valuable connections, while the web version expands accessibility.</p>
+    <p><strong>Technologies:</strong> Flutter - Flutter Web - Firebase (Authentication, Firestore, Storage, Dynamic Links, Hosting) </p>
     `,
     hasStoresLinks: true,
     appStore: "https://apps.apple.com/app/id6443669769",
@@ -50,7 +50,7 @@ I worked on a mobile app built with Flutter and Firebase that allows users to si
     title: "Whos App",
     description: `
       <p>
-I worked on this mobile app built with Flutter and Firebase . <br />The app was designed to allow users to share their current location or search for a location to find the nearest services available to contact. <br />I integrated Google Maps into the app to provide accurate location data and user-friendly mapping functionality. <br />The Firebase backend was used to store and manage user data, as well as handle authentication and real-time updates. <br />The final product was a polished, user-friendly app that delivered on the client's expectations and provided a valuable service to its users.</p>`,
+This app enables effortless location sharing and service discovery. With a user-friendly interface and powerful features, it connects users to nearby services seamlessly.<p><strong>Technologies:</strong> Flutter - Google Cloud (Maps, Places) - Firebase (Authentication, Firestore, Storage, FCM) </p>`,
     hasStoresLinks: true,
     appStore: "https://apps.apple.com/eg/app/whosapp-app/id1642543173",
     googlePlay:
@@ -61,8 +61,9 @@ I worked on this mobile app built with Flutter and Firebase . <br />The app was 
     title: "Ghana Football App",
     description: `
       <p>
-      I had the opportunity to work on this Flutter app, I was responsible for enhancing the app's UI and making it more user-friendly. <br/>Additionally, I integrated null safety into the app to make it more stable and secure.<br/> I also dealt with new endpoints API integration, which allowed for better functionality and performance.<br/>Moreover, I linked the app to Firebase, which enabled dynamic links and Google Analytics, providing valuable insights into user behavior. <br/>Overall, my contributions helped to improve the user experience and functionality of the Ghana Football App.
-</p>`,
+      In this app, I enhanced the UI for a more user-friendly experience. Implementing null safety improved stability and security. Integration of new API endpoints enhanced functionality and performance, while Firebase integration provided valuable insights into user behavior.</p>
+          <p><strong>Technologies:</strong> Flutter - API Integeration - Firebase (Google Analytics) </p>
+`,
     hasStoresLinks: true,
     appStore: "https://apps.apple.com/eg/app/ghana-football-app/id1586234457",
     googlePlay:
@@ -73,7 +74,9 @@ I worked on this mobile app built with Flutter and Firebase . <br />The app was 
     title: "Youtube Clone App",
     description: `
       <p>
-I developed this web app using ReactJS, Material UI and integrated the YouTube API to fetch and display videos. <br />The app provides a user-friendly interface for users to search for videos and watch them. <br />The Material UI components were used to create a modern and intuitive design, and the YouTube API integration ensured that the app is always up-to-date with the latest videos. <br />Overall, the project served as a great opportunity to practice my web development skills and enhance my knowledge of ReactJS and APIs.</p>`,
+This app is a user-friendly web application for seamless video searching and watching. With ReactJS and Material UI, it provides an intuitive interface and modern design. Integration of the YouTube API ensures up-to-date video content for an engaging experience.</p>
+          <p><strong>Technologies:</strong> React JS - Material UI - API Integeration </p>
+`,
     hasStoresLinks: false,
     websiteLink: "https://syomna.github.io/Youtube-Clone-ReactJS/",
   },
@@ -109,3 +112,14 @@ function displayProject(project) {
   `;
   return html;
 }
+
+const downloadButton = document.querySelector('.resume');
+downloadButton.addEventListener('click', () => {
+  const fileName = "Yomna_Salah_Attallah_Front-end_Developer.pdf";
+  const filePath = "assets/cv/Yomna_Salah_Attallah_Front-end_Developer.pdf";
+  const link = document.createElement('a');
+  link.setAttribute('download', fileName);
+  link.setAttribute('href', filePath);
+  link.click();
+});
+

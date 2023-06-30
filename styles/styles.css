@@ -8,6 +8,7 @@
   top: 0;
   width: 100%;
   height: 6vh;
+  z-index: 1000;
 }
 #nav ul {
   display: flex;
@@ -95,6 +96,14 @@
   cursor: pointer;
   background-color: #ffc86a;
   color: #fff;
+}
+#about .resume {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: solid #ffc86a 0.3rem;
+  font-size: 1rem;
+  background-color: #ffc86a;
 }
 #about #social {
   display: flex;
@@ -199,6 +208,10 @@
 }
 #portfolio #projects {
   margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
 }
 #portfolio #projects .project {
   display: flex;
@@ -209,6 +222,7 @@
 #portfolio #projects .project img {
   height: 40vh;
   padding: 0;
+  padding-right: 1rem;
 }
 #portfolio #projects .project .description {
   flex-grow: 1;
@@ -324,7 +338,6 @@
 #contact .contacts {
   padding: 2rem 10vw;
   display: flex;
-  margin: 1rem 0;
   justify-content: space-around;
   gap: 10px;
 }
@@ -396,4 +409,14 @@ footer {
   justify-content: space-around;
   align-items: center;
   font-size: 0.85rem;
+}
+
+.social-contact {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 10px;
+}
+.social-contact .fab {
+  font-size: 30px;
 }/*# sourceMappingURL=styles.css.map */

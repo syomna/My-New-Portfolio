@@ -54,3 +54,13 @@ footer {
   align-items: center;
   font-size: 0.85rem;
 }
+
+.social-contact {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 10px;
+  .fab {
+    font-size: 30px;
+  }
+}
