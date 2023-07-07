@@ -34,6 +34,30 @@ document.getElementById("skills").innerHTML = skillsHTML;
 
 const projects = [
   {
+    image: "./assets/images/chatty.jpeg",
+    title: "Chatty Web App",
+    description: `
+      <p>
+Chatty is a dynamic chat web app with secure login, real-time chatting, emojis, profile editing, and customizable dark/light modes</p>
+          <p><strong>Technologies:</strong> Node.js, Express.js, Socket.io, Bcrypt and MongoDB on the server-side, and React.js, Material UI, and Client
+эоскет.io on the cient-side </p>
+`,
+    hasStoresLinks: false,
+    websiteLink:
+      "https://drive.google.com/file/d/1rShsU0jDZ5OSrDKByA67yWjBIbRGOIQ4/view?usp=sharing",
+  },
+  {
+    image: "./assets/images/youtube-clone.png",
+    title: "Youtube Clone App",
+    description: `
+      <p>
+This app is a user-friendly web application for seamless video searching and watching. With ReactJS and Material UI, it provides an intuitive interface and modern design. Integration of the YouTube API ensures up-to-date video content for an engaging experience.</p>
+          <p><strong>Technologies:</strong> React JS - Material UI - API Integeration </p>
+`,
+    hasStoresLinks: false,
+    websiteLink: "https://syomna.github.io/Youtube-Clone-ReactJS/",
+  },
+  {
     image: "./assets/images/nanny-finder.png",
     title: "Nanny Finder App",
     description: `
@@ -69,17 +93,6 @@ This app enables effortless location sharing and service discovery. With a user-
     googlePlay:
       "https://play.google.com/store/apps/details?id=com.ghfootballapp.app&hl=en&gl=US",
   },
-  {
-    image: "./assets/images/youtube-clone.png",
-    title: "Youtube Clone App",
-    description: `
-      <p>
-This app is a user-friendly web application for seamless video searching and watching. With ReactJS and Material UI, it provides an intuitive interface and modern design. Integration of the YouTube API ensures up-to-date video content for an engaging experience.</p>
-          <p><strong>Technologies:</strong> React JS - Material UI - API Integeration </p>
-`,
-    hasStoresLinks: false,
-    websiteLink: "https://syomna.github.io/Youtube-Clone-ReactJS/",
-  },
 ];
 let list = "";
 projects.forEach((e) => (list += displayProject(e)));
@@ -87,23 +100,22 @@ document.getElementById("projects").innerHTML = list;
 function displayProject(project) {
   var html = `
     <div class="project">
-      <img src=${project.image} alt="nanny-finder" />
+      <img src=${project.image} alt=${project.title} width="400" />
       <div class="description">
         <h3>${project.title}</h3>
         <hr />
         ${project.description}
         <br />
-        ${
-          project.hasStoresLinks
-            ? `
+        ${project.hasStoresLinks
+      ? `
             <i class="fa fa-link"></i>
            <a href=${project.appStore} target="_blank">App Store</a>
            <i class="fa fa-link"></i>
            <a href=${project.googlePlay} target="_blank">Google Play</a>
         `
-            : `
+      : `
             <i class="fa fa-link"></i>
-           <a href=${project.websiteLink} target="_blank">Website Link</a>
+           <a href=${project.websiteLink} target="_blank">${project.title == "Chatty Web App" ? "Demo" : "Website Link"} </a>
         
         `
         }
@@ -115,8 +127,8 @@ function displayProject(project) {
 
 const downloadButton = document.querySelector('.resume');
 downloadButton.addEventListener('click', () => {
-  const fileName = "Yomna_Salah_Attallah_Front-end_Developer.pdf";
-  const filePath = "assets/cv/Yomna_Salah_Attallah_Front-end_Developer.pdf";
+  const fileName = "Yomna_Salah_Attallah_Frontend_Developer.pdf";
+  const filePath = "assets/cv/Yomna_Salah_Attallah_Frontend_Developer.pdf";
   const link = document.createElement('a');
   link.setAttribute('download', fileName);
   link.setAttribute('href', filePath);
